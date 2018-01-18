@@ -20,7 +20,7 @@ namespace Avg10sCores
         {  // declare values to hold test values and perform calculation
             int i, n, sum = 0;
             double avg;
-            string LetGrade;
+            //string LetGrade;
 
             //illicit input
             Console.Write("\n\n");
@@ -41,11 +41,11 @@ namespace Avg10sCores
             avg = sum / 10.0;
 
             Console.Write("\nThe Average is : {0}\n",avg);
-            Console.WriteLine("Your letter grade is :  {GetGrade(avg)}");
+            Console.WriteLine("Your letter grade is : {0}\n", (GetGrade(avg)));
         }  // end main
 
         //assigns a letter grade based on numerical value
-        static char GetGrade(int LetGrade)
+        static char GetGrade(double LetGrade)
         {
             int avg = 0;
             char let;
@@ -66,7 +66,7 @@ namespace Avg10sCores
             {
                 let = 'D';
             }
-            else if (avg >= 50 && avg <= 59)
+            else if (avg >= 0 && avg <= 59)
             {
                 let = 'F';
             }
