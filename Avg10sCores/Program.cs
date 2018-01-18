@@ -41,7 +41,7 @@ namespace Avg10sCores
             avg = sum / 10.0;
 
             Console.Write("\nThe Average is : {0}\n",avg);
-            Console.WriteLine("Your letter grade is (let)");
+            Console.WriteLine("Your letter grade is :  {GetGrade(avg)}");
         }  // end main
 
         //assigns a letter grade based on numerical value
@@ -75,9 +75,9 @@ namespace Avg10sCores
                 Console.WriteLine("numbers entered out of bounds");
                 return 'x';
             }
-            char Let = default(char);
-            return Let;
-        }12
+            
+            return let;
+        }
 
 
       
