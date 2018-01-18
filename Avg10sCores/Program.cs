@@ -17,11 +17,12 @@ namespace Avg10sCores
     {
         static void Main(string[] args)
 
-        {
+        {  // declare values to hold test values and perform calculation
             int i, n, sum = 0;
             double avg;
+            string LetGrade;
 
-
+            //illicit input
             Console.Write("\n\n");
             Console.Write("Enter 10 scores between 0 and 100 and calculate Average:\n");
             Console.Write("----------------------------------------------");
@@ -36,40 +37,51 @@ namespace Avg10sCores
                 n = Convert.ToInt32(Console.ReadLine());
                 sum += n;
             }
+            //calculate average and assign to varabila avg
             avg = sum / 10.0;
 
-            string LetGrade = "Grade";
-            Console.ReadKey();
-            {
-                if (avg >= 90 && avg <= 100)
-                {
-                    LetGrade = "A";
-                }
-                else if (avg >= 80 && avg <= 89)
-                {
-                    LetGrade = "B";
-                }
-                else if (avg >= 70 && avg <= 79)
-                {
-                    LetGrade = "C";
-                }
-                else if (avg >= 60 && avg <= 69)
-                {
-                    LetGrade = "D";
-                }
-                else if (avg >= 50 && avg <= 59)
-                {
-                    LetGrade = "F";
-                }
-                //else
-                //{
-                  //  Console.WriteLine("numbers entered out of bounds");
-                //}
-                Console.Write("\nThe Average is : {1}\n", sum, avg);
-                Console.WriteLine("Your letter grade is -> " + ($"LetGrade"));
-            }
-        }       
-    }
-}
-    
+            Console.Write("\nThe Average is : {0}\n",avg);
+            Console.WriteLine("Your letter grade is (let)");
+        }  // end main
 
+        //assigns a letter grade based on numerical value
+        static char GetGrade(int LetGrade)
+        {
+            int avg = 0;
+            char let;
+            Console.ReadKey();
+            if (avg >= 90 && avg <= 100)
+            {
+                let = 'A';
+            }
+            else if (avg >= 80 && avg <= 89)
+            {
+                let = 'B';
+            }
+            else if (avg >= 70 && avg <= 79)
+            {
+                let = 'C';
+            }
+            else if (avg >= 60 && avg <= 69)
+            {
+                let = 'D';
+            }
+            else if (avg >= 50 && avg <= 59)
+            {
+                let = 'F';
+            }
+            else
+            {
+                Console.WriteLine("numbers entered out of bounds");
+                return 'x';
+            }
+            char Let = default(char);
+            return Let;
+        }12
+
+
+      
+    }
+
+ 
+}
